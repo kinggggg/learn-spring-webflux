@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.zeek</groupId>
     <artifactId>learn-spring-webflux</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>learn-spring-webflux</name>
     <description>Demo project for Spring WebFlux</description>
 
@@ -20,7 +20,7 @@
     <scm>
         <connection>scm:git:git@github.com:kinggggg/learn-spring-webflux.git</connection>
         <developerConnection>scm:git:git@github.com:kinggggg/learn-spring-webflux.git</developerConnection>
-      <tag>learn-spring-webflux-0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <dependencies>
