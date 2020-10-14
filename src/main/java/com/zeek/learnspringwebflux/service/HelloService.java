@@ -1,5 +1,9 @@
 package com.zeek.learnspringwebflux.service;
 
+import com.zeek.learnspringwebflux.annotation.ApiCallMonitor;
+
+import java.util.List;
+
 /**
  * @ClassName HelloService
  * @Description
@@ -7,5 +11,7 @@ package com.zeek.learnspringwebflux.service;
  * @Date 2020/9/26 5:22 下午
  * @Version v1.0
  **/
-public class HelloService {
+public interface HelloService {
+
+    List<String> getList(boolean flag);
 }
