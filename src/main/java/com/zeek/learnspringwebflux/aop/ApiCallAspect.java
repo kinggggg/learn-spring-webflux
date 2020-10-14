@@ -18,7 +18,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApiCallAspect {
 
-    @Pointcut("@annotation(com.zeek.learnspringwebflux.annotation.ApiCallMonitor)")
+//    @Pointcut("@annotation(com.zeek.learnspringwebflux.annotation.ApiCallMonitor)")
+    @Pointcut("execution(public * com.zeek.learnspringwebflux.service.*.*(..))")
     public void apiCallMonitor() {
 
     }

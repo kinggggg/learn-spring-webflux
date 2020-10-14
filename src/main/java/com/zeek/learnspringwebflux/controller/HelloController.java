@@ -1,5 +1,6 @@
 package com.zeek.learnspringwebflux.controller;
 
+import com.zeek.learnspringwebflux.domain.User;
 import com.zeek.learnspringwebflux.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,8 @@ public class HelloController {
     public List<String> list(@PathVariable boolean flag) {
 
         List<String> list = helloService.getList(flag);
+
+        List<User> users = helloService.getUsers();
 
         return list;
 

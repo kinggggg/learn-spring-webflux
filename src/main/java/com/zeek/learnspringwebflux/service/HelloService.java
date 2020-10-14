@@ -1,6 +1,7 @@
 package com.zeek.learnspringwebflux.service;
 
 import com.zeek.learnspringwebflux.annotation.ApiCallMonitor;
+import com.zeek.learnspringwebflux.domain.User;
 
 import java.util.List;
 
@@ -14,4 +15,6 @@ import java.util.List;
 public interface HelloService {
 
     List<String> getList(boolean flag);
+
+    List<User> getUsers();
 }
