@@ -4,6 +4,7 @@ import com.zeek.learnspringwebflux.exception.BusinessException;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
@@ -28,8 +29,12 @@ public class ApiCallAspect {
     public void doAround(ProceedingJoinPoint proceedingJoinPoint) {
 
         try {
+            System.out.println("service方法执行前");
+
             Object proceed = proceedingJoinPoint.proceed();
             System.out.println(proceed);
+
+            System.out.println("service方法执行后");
         } catch (Throwable throwable) {
             System.out.println("error: 系统错误");
             throw new BusinessException(500, "系统错误");
