@@ -40,6 +40,7 @@ public class RouterFunctionConfig {
                .andRoute(GET("/bye"),
                         serverRequest -> ok().body(just("See ya!"), String.class))
                .andRoute(GET("/test"),
-                        serverRequest -> ServerResponse.created(URI.create("http://localhost:8081/testtest")).body(userMono, User.class));
+                        // 下面的/testtest地址是什么作用？？
+                        serverRequest -> ServerResponse.created(URI.create("http://localhost:8081/testtest/" + user.getAge())).body(userMono, User.class));
     }
 }
