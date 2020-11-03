@@ -9,6 +9,7 @@ import javax.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author liweibo03 <liweibo03@kuaishou.com>
@@ -16,6 +17,7 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     private String id;
@@ -34,5 +36,6 @@ public class User {
     @Max(10)
     @Min(1)
     private Integer level;
+
 }
 
